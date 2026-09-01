@@ -1,6 +1,6 @@
 # Groq Chatbot + OCR Demo (Next.js + shadcn/ui)
 
-A small teaching example for a web development course. It shows two things:
+A small teaching example for deploying a web app that integrates AI models. It shows two things:
 
 1. **A chatbot**: sends messages to a Groq language model and shows the reply.
 2. **OCR**: uploads an image and asks a Groq *vision* model to read the text in it (no separate OCR library needed, the language model does the reading).
