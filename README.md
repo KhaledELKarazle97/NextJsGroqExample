@@ -1,9 +1,9 @@
 # Groq Chatbot + OCR Demo (Next.js + shadcn/ui)
 
-A small teaching example for a web development course. It shows two things:
+A small teaching example for deploying a web app that integrates AI models. It shows two things:
 
-1. **A chatbot** — sends messages to a Groq language model and shows the reply.
-2. **OCR** — uploads an image and asks a Groq *vision* model to read the text in it (no separate OCR library needed — the language model does the reading).
+1. **A chatbot**: sends messages to a Groq language model and shows the reply.
+2. **OCR**: uploads an image and asks a Groq *vision* model to read the text in it (no separate OCR library needed, the language model does the reading).
 
 Both features are built the same way: a page in `app/` calls a route in
 `app/api/`, and that route is the only place the Groq API key is used. This
@@ -18,11 +18,7 @@ npm install
 ## 2. Add your Groq API key
 
 1. Create a free key at [console.groq.com/keys](https://console.groq.com/keys).
-2. Copy the example env file:
-   ```bash
-   cp .env.local.example .env.local
-   ```
-3. Open `.env.local` and paste your key:
+2. Create `.env` file and paste your key:
    ```
    GROQ_API_KEY=gsk_your_key_here
    ```
@@ -88,10 +84,7 @@ const completion = await groq.chat.completions.create({
 });
 ```
 
-This is a great, low-effort way to add OCR to a project: no Tesseract or
-image-processing library required, just a model call.
-
-## Notes for students
+## Notes
 
 - **Model names change.** Groq regularly retires and adds models. If a
   request fails with a "model not found" error, check
